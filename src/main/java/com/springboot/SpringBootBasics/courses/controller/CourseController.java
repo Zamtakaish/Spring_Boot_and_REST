@@ -12,6 +12,12 @@ public class CourseController {
     //http://localhost:8080/courses
     @GetMapping("/courses")
     public List<Course> getAllCourses() {
+        return Arrays.asList(new Course(1, "Learn Microservices", "Zamtakaish"),
+                new Course(2, "Full Stack with Angular and React", "Zamtakaish"));
+    }
+
+    @GetMapping("/courses/1")
+    public List<Course> getCourseDetails() {
         return Arrays.asList(new Course(1, "Learn Microservices", "Zamtakaish"));
     }
 }
