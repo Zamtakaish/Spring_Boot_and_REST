@@ -3,9 +3,7 @@ package com.springboot.SpringBootBasics.courses.controller;
 import com.springboot.SpringBootBasics.courses.bean.Course;
 import com.springboot.SpringBootBasics.courses.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,4 +33,10 @@ public class CourseController {
         return course.get();
         //return Arrays.asList(new Course(1, "Learn Microservices", "Zamtakaish"));
     }
+
+    @PostMapping("/courses")
+    public void createCourse(@RequestBody Course course){
+        repository.save(course);
+    }
+
 }
