@@ -43,4 +43,9 @@ public class CourseController {
     public void updateCourse(@PathVariable long id, @RequestBody Course course){
         repository.save(course);
     }
+
+    @DeleteMapping("/courses/{id}")
+    public void deleteCourse(@PathVariable long id){
+        repository.deleteById(id);
+    }
 }
