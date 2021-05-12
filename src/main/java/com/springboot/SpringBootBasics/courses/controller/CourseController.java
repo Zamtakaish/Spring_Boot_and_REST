@@ -18,6 +18,6 @@ public class CourseController {
 
     @GetMapping("/courses/1")
     public List<Course> getCourseDetails() {
-        return Arrays.asList(new Course(1, "Learn", "Zamtakaish"));
+        return Arrays.asList(new Course(1, "Learn Microservices", "Zamtakaish"));
     }
 }
