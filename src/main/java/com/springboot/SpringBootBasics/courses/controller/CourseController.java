@@ -39,4 +39,8 @@ public class CourseController {
         repository.save(course);
     }
 
+    @PutMapping("/courses/{id}")
+    public void updateCourse(@PathVariable long id, @RequestBody Course course){
+        repository.save(course);
+    }
 }
